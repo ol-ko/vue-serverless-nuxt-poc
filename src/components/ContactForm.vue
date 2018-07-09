@@ -34,80 +34,86 @@
 </template>
 
 <script lang="ts">
-    import {Component, Vue} from 'nuxt-property-decorator';
+import { Component, Vue } from "nuxt-property-decorator";
+import { SweetModal, SweetModalTab } from "sweet-modal-vue";
 
-    @Component({})
-    export default class ContactForm extends Vue {
-        private errors: string[] = [];
-        private name: string = '';
-        private email: string = '';
-        private message: string = '';
-        private maxLength: number = 400;
+@Component({
+  components: {
+    SweetModal,
+    SweetModalTab
+  }
+})
+export default class ContactForm extends Vue {
+  private errors: string[] = [];
+  private name: string = "";
+  private email: string = "";
+  private message: string = "";
+  private maxLength: number = 400;
 
-        private checkForm(event: any) {
-            this.errors = [];
-            if (!this.name) {
-                this.errors.push('Name required.');
-            }
-            if (!this.email) {
-                this.errors.push('Email required.');
-            } else if (!this.validEmail()) {
-                this.errors.push('Valid email required.');
-            }
-            if (!this.errors.length) {
-                return true;
-            }
-            event.preventDefault();
-        }
-
-        private validEmail() {
-            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(this.email);
-        }
+  private checkForm(event: any) {
+    this.errors = [];
+    if (!this.name) {
+      this.errors.push("Name required.");
     }
+    if (!this.email) {
+      this.errors.push("Email required.");
+    } else if (!this.validEmail()) {
+      this.errors.push("Valid email required.");
+    }
+    if (!this.errors.length) {
+      return true;
+    }
+    event.preventDefault();
+  }
+
+  private validEmail() {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(this.email);
+  }
+}
 </script>
 
 <style scoped lang="scss">
-    %input {
-        padding: 1em;
-        font-size: 16px;
-        display: block;
-        width: 100%;
-        &:hover {
-            border-color: green;
-        }
-    }
+%input {
+  padding: 1em;
+  font-size: 16px;
+  display: block;
+  width: 100%;
+  &:hover {
+    border-color: green;
+  }
+}
 
-    input,
-    button,
-    textarea {
-        @extend %input;
-    }
+input,
+button,
+textarea {
+  @extend %input;
+}
 
-    input,
-    textarea {
-        border: 1px solid blue;
-    }
+input,
+textarea {
+  border: 1px solid blue;
+}
 
-    button {
-        background-color: red;
-        color: white;
-        font-weight: bold;
-        border-radius: 3em;
-        &:hover {
-            background-color: darken(red, $amount: 10%);
-        }
-    }
+button {
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border-radius: 3em;
+  &:hover {
+    background-color: darken(red, $amount: 10%);
+  }
+}
 
-    label {
-        display: block;
-    }
+label {
+  display: block;
+}
 
-    .contact-form {
-        clear: both;
-        padding: 1em;
-        background-color: aliceblue;
-        border: 1px solid rgba($color: #000000, $alpha: 0.15);
-        box-shadow: 0 2px 3px 0 rgba($color: #000000, $alpha: 0.15);
-    }
+.contact-form {
+  clear: both;
+  padding: 1em;
+  background-color: aliceblue;
+  border: 1px solid rgba($color: #000000, $alpha: 0.15);
+  box-shadow: 0 2px 3px 0 rgba($color: #000000, $alpha: 0.15);
+}
 </style>
