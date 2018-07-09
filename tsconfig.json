@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "es2015"],
+    "module": "es2015",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "strictNullChecks": true,
+    "removeComments": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "newLine": "LF",
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "jsx": "preserve",
+    "outDir": "lib",
+    "isolatedModules": false,
+    "types": ["vue-typescript-import-dts"]
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
