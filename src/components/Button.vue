@@ -1,7 +1,7 @@
 <template>
   <a :class="['base-button', 'color-' + color ]" v-on:click="onClick">
-		<slot></slot>
-	</a>
+    <slot></slot>
+  </a>
 </template>
 
 <script lang="ts">

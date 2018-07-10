@@ -54,7 +54,7 @@ const ContactFormBase = Vue.extend({
     openModal() {
       this.$refs.modalExample.open();
     }
-  }
+  },
 });
 
 @Component({
@@ -73,7 +73,7 @@ const ContactFormBase = Vue.extend({
         compare:
           '<svg viewBox="0 0 24 24"><path fill="#000000" d="M19,3H14V5H19V18L14,12V21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M10,18H5L10,12M10,3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H10V23H12V1H10V3Z" /></svg>'
       };
-    }
+    },
   },
 })
 export default class ContactForm extends ContactFormBase {
