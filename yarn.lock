@@ -7519,6 +7519,10 @@ svgo@^0.7.0:
     sax "~1.2.1"
     whet.extend "~0.9.9"
 
+sweet-modal-vue@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/sweet-modal-vue/-/sweet-modal-vue-2.0.0.tgz#205ee28b7e5c8579e44303544b500ef7f4fcab21"
+
 symbol-tree@^3.2.1:
   version "3.2.2"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.2.tgz#ae27db38f660a7ae2e1c3b7d1bc290819b8519e6"
@@ -8118,6 +8122,10 @@ vue-meta@^1.4.3:
     deepmerge "^2.0.0"
     lodash.isplainobject "^4.0.6"
     object-assign "^4.1.1"
+
+vue-no-ssr@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/vue-no-ssr/-/vue-no-ssr-0.2.2.tgz#e1a0ef0ba39fc54972edd71a2ae11a7988312b19"
 
 vue-router@^3.0.1:
   version "3.0.1"

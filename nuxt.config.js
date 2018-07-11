@@ -48,7 +48,10 @@ module.exports = {
         "../nuxt-modules/typescript.js"
     ],
     build: {
-        publicPath: "/dev/_nuxt/"
+        publicPath: "/dev/"
+    },
+    router: {
+        base: '/dev/'
     },
     performance: {
         gzip: false

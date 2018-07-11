@@ -10,7 +10,7 @@ const app = express();
 app.use(awsServerlessExpressMiddleware.eventContext());
 
 // Provide Assets
-app.use('/_nuxt', express.static(path.join(__dirname, '.nuxt', 'dist')));
+app.use('/dev/', express.static(path.join(__dirname, '.nuxt', 'dist')));
 
 // Add Nuxt
 let config = require('./nuxt.config.js');
