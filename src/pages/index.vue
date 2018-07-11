@@ -15,15 +15,19 @@
         </div>
 
 
-        <contact-form></contact-form>
+        <no-ssr>
+            <contact-modal></contact-modal>
+        </no-ssr>
 
     </article>
 </template>
 
 <script lang="ts">
     import { Component, Vue } from 'nuxt-property-decorator';
-    import ContactForm from '../components/ContactForm.vue';
+    import ContactModal from '../components/ContactModal.vue';
     import {State} from "vuex-class";
+    import NoSSR from 'vue-no-ssr';
+
     @Component({
         filters: {
             currency(input: number): string {
@@ -31,7 +35,8 @@
             },
         },
         components: {
-            ContactForm
+            ContactModal,
+            'no-ssr': NoSSR
         },
     })
     export default class Listing extends Vue {

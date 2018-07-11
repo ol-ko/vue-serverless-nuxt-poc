@@ -47,8 +47,8 @@ module.exports = {
         "@nuxtjs/axios",
         "../nuxt-modules/typescript.js"
     ],
-    build: {
-        publicPath: "/dev/_nuxt/"
+    router: {
+        base: '/dev/'
     },
     performance: {
         gzip: false

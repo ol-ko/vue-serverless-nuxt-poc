@@ -19,7 +19,8 @@
     "nuxt": "^1.4.1",
     "nuxt-class-component": "^1.0.1",
     "nuxt-property-decorator": "^1.2.0",
-    "sweet-modal-vue": "^2.0.0"
+    "sweet-modal-vue": "^2.0.0",
+    "vue-no-ssr": "^0.2.2"
   },
   "devDependencies": {
     "@types/jest": "^21.1.4",
