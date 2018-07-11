@@ -36,7 +36,7 @@ module.exports = {
             {
                 rel: "icon",
                 type: "image/x-icon",
-                href: "/favicon.ico"
+                href: "/dev/favicon.ico"
             }
         ]
     },
@@ -45,14 +45,13 @@ module.exports = {
     */
     modules: [
         "@nuxtjs/axios",
-        "../nuxt-typescript.js"
+        "../nuxt-modules/typescript.js"
     ],
-    build: {},
+    build: {
+        publicPath: "/dev/_nuxt/"
+    },
     performance: {
         gzip: false
-    },
-    router: {
-        base: '/poc/'
     },
     dev: false
 };
