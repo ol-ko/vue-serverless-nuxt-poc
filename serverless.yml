@@ -1,0 +1,25 @@
+service: vue-serverless-ssr-poc
+
+provider:
+  name: aws
+  runtime: nodejs8.10
+  region: eu-central-1
+
+functions:
+  nuxt:
+    handler: handler.nuxt
+    events:
+    - http:
+        path: /
+        method: get
+    - http:
+        path: "{proxy+}"
+        method: get
+
+plugins:
+  - serverless-apigw-binary
+
+custom:
+  apigwBinary:
+    types:
+      - '*/*'
